@@ -94,7 +94,6 @@ function iniciarJogo() {
     if (snake[0].y == -1) snake[0].y = 19;
 
 
-
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
 
@@ -107,6 +106,7 @@ function iniciarJogo() {
     if (snakeX != food.x || snakeY != food.y) {
         snake.pop(); //pop tira o último elemento da lista
     } else {
+        tocarMusica();
         posFood();
         attScore();
     }
@@ -126,6 +126,9 @@ function iniciarJogo() {
             restart();
         }
     }
+
+    
+
 
 }
 
@@ -158,6 +161,11 @@ function restart() {
 
     restart.disabled = false;
 
+}
+
+function tocarMusica() {
+    var audio = document.getElementById("efeito");
+    audio.play();
 }
 
 function startJogo() {
