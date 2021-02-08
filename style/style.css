@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    background-color: rgb(109, 144, 56);
+    min-width: 1000px;
+    font-family: 'Courier New', Courier, monospace
+}
+
+header .container{
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+main .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+main .container .instrucoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background-color: rgb(240, 240, 240);
+
+    height: 300px;
+    width: 450px;
+    padding-left: 20px;
+}
+
+.score{
+    padding-top: 10px;
+    color: white;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.botoes button{
+    font-size: 30px;
+}
+
+.scores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+
+canvas{
+    margin-top: 10px;
+    height: 500px;
+    width: 500px;
+}
+
+#snake{
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    -webkit-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+    box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+
+    
+}
+
+.container-esquerdo{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-esquerdo .botoes button{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 20px 50px;
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+
+}
+
+
+.container-esquerdo .botoes button:hover{
+    color: black;
+}
+
+.container-esquerdo .botoes button:active {
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.container-esquerdo .botoes button:disabled {
+    background-color: black;
+    color: white;
+  }
+  
+
+/* footer */
+
+footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    font-size: large;
+    font-weight: bold;
+}
+
+footer .container a{
+    
+}
+
+

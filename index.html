@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cobrinha</title>
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Jogo da Cobrinha</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="container-esquerdo">
+                <div class="instrucoes" style="text-align: center;">
+                    <div class="como-jogar">
+                        <h1>COMO JOGAR:</h1>
+                        <h2>
+                            objetivo do jogo é pegar todas as comidas
+                        </h2>
+
+
+                    </div>
+
+                    <div class="comandos">
+                        <h1>COMANDOS: </h1>
+                        <h2>Para cima: seta <i class="fas fa-arrow-up"></i></h2>
+                        <h2>Para baixo: seta <i class="fas fa-arrow-down"></i></h2>
+                        <h2>Para esquerda: seta <i class="fas fa-arrow-left"></i></h2>
+                        <h2>Para Direita: seta <i class="fas fa-arrow-right"></i></h2>
+
+
+                    </div>
+                </div>
+                <div class="botoes">
+                    <button onclick="start(this)">START</button>
+                    <button id="restart" disabled onclick="start(this)">RESTART</button>
+                </div>
+            </div>
+
+
+
+
+            <div>
+                <div class="scores">
+                    <h1 class="score">SCORE: <span id="score">0</span></h1>
+                    <h1 class="score">MAX-SCORE: <span id="max-score">0</span></h1>
+                </div>
+
+                <canvas id="snake" height="20" width="20"></canvas>
+            </div>
+
+
+
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Desenvolvido por <a href="https://github.com/donathanQ" target="_blank">Donathan Queiros</a> baseado na video aula da <a
+                    href="https://github.com/SpruceGabriela" target="_blank">Gabriela Pinheiro</a> do site <a
+                    href="https://web.digitalinnovation.one/" target="_blank">Digital Innovation One</a> </p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/5a89d9ad91.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
