@@ -1,6 +1,7 @@
 let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
 let snake = [];
+let directions = ["right"];
 let score = 0;
 let maxscore = 0;
 let jogo;
@@ -10,7 +11,6 @@ snake[0] = {
     y: 10
 }
 
-let direction = "right";
 
 let food = {
     x: 0,
@@ -51,12 +51,27 @@ function drawFood() {
 
 document.addEventListener('keydown', update);
 
+function getDirection() {
+    var clone = directions[0];
+    if (directions.length > 1) {
+        directions.shift();
+    }
+
+    return clone;
+}
+
+
+
 function update(event) {
+    var direction = directions[0];
     if (event.keyCode == 37 && direction != 'right') direction = 'left';
     if (event.keyCode == 38 && direction != 'down') direction = 'up';
     if (event.keyCode == 39 && direction != 'left') direction = 'right';
     if (event.keyCode == 40 && direction != 'up') direction = 'down';
+    directions.push(direction);
 }
+
+
 
 function attScore() {
     score++;
@@ -67,15 +82,18 @@ function attScore() {
 
 
 function iniciarJogo() {
+    criarBG();
+    criarCobrinha();
+    drawFood();
+
+    var direction = getDirection();
 
     if (snake[0].x == 20) snake[0].x = 0;
     if (snake[0].x == -1) snake[0].x = 19;
     if (snake[0].y == 20) snake[0].y = 0;
     if (snake[0].y == -1) snake[0].y = 19;
 
-    criarBG();
-    criarCobrinha();
-    drawFood();
+
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
@@ -143,7 +161,7 @@ function restart() {
 }
 
 function startJogo() {
-    jogo = setInterval(iniciarJogo, 100);
+    jogo = setInterval(iniciarJogo, 150);
 }
 
 function pararJogo() {
